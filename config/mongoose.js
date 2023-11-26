@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // connecting mongoose to its default server and ecommerceDB
-mongoose.connect(process.env.connectionString, {
-    useNewUrlParser: true
-});
+mongoose.connect(process.env.connectionString);
 
 const db = mongoose.connection;
 
