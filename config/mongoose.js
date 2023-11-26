@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 // connecting mongoose to its default server and ecommerceDB
-mongoose.connect("mongodb://127.0.0.1:27017/ecommerce_api", {
+mongoose.connect(process.env.connectionString, {
     useNewUrlParser: true
 });
 
